@@ -41,6 +41,11 @@
             margin: 5px 0;
         }
 
+        .profile {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
         h2 {
             color: #2b5173;
             font-size: 14pt;
@@ -48,6 +53,11 @@
             font-weight: normal;
             border-bottom: 1px solid #b3b3b3;
             padding-bottom: 5px;
+        }
+
+        p {
+            break-inside: avoid;
+            page-break-inside: avoid;
         }
 
         .item {
@@ -58,6 +68,20 @@
             margin: 5px 0;
         }
 
+        .project-url {
+            margin-top: 5px;
+        }
+
+        .project-url a {
+            color: #2b5173;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-url a:hover {
+            text-decoration: underline;
+        }
+
         .institution {
             font-weight: bold;
         }
@@ -66,8 +90,88 @@
             color: #555;
         }
 
-        .section {
+        .download-btn {
+            display: inline-block;
+            background-color: #2b5173;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 5px;
             margin-top: 20px;
+            font-size: 12pt;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .download-btn:hover {
+            background-color: #1d3a50;
+        }
+
+        .grade {
+            font-style: italic;
+        }
+
+        .grade a {
+            color: #2b5173;
+            text-decoration: none;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .download-btn,
+            nav {
+                display: none;
+            }
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #2b5173;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #555;
+            font-size: 10pt;
+            margin-top: 20px;
+            border-top: 1px solid #b3b3b3;
+            padding-top: 20px;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 11pt;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #2b5173;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -78,43 +182,66 @@
             <strong>
                 <p>Mazba Uddin Saif</p>
                 <p>House-324, Road-10, Block-D, Bashundhara, Dhaka-1229, Bangladesh</p>
-                <p>mazbauddinsaif@gmail.com | +8801319040953</p>
-                <p><a href="https://www.linkedin.com/in/mazbauddinsaif" target="_blank">linkedin.com/in/mazbauddinsaif</a></p>
+                <p>mazbauddinsaif@gmail.com</p>
+                <p>+8801319040953</p>
             </strong>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mazbauddinsaif" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Career Objective</h2>
+        <nav>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#volunteering">Volunteering</a>
+            <a href="#skills">Skills</a>
+            <a href="#interests">Interests</a>
+        </nav>
+
+        <div class="profile">
             <p>To leverage my growing expertise in Computer Science and software development to contribute meaningfully to innovative projects, enhance my technical and problem-solving skills, and deliver impactful results in a collaborative environment.</p>
         </div>
 
-        <div class="section">
-            <h2>Career Summary</h2>
-            <p>Enthusiastic and detail-oriented Computer Science student with a strong academic background and diverse extra-curricular involvement. Demonstrated leadership in organizing cultural events and participating in national Olympiads. Skilled in Microsoft Office, presentation design, and creative communication, with an interest in programming, design, and continuous learning.</p>
-        </div>
-
-        <div class="section">
-            <h2>Academic Qualification</h2>
+        <div class="section" id="education">
+            <h2>Education</h2>
             <div class="item">
                 <p class="institution">B.Sc. in Computer Science & Engineering, North South University</p>
                 <p class="date">Ongoing (Started April 2025)</p>
             </div>
             <div class="item">
-                <p class="institution">HSC, Dhaka Residential Model College</p>
+                <p class="institution">Higher Secondary Certificate, Dhaka Residential Model College</p>
                 <p class="date">2024</p>
             </div>
             <div class="item">
-                <p class="institution">SSC, Cox’s Bazar Govt. Boys’ High School</p>
+                <p class="institution">Secondary School Certificate, Cox’s Bazar Govt. Boys’ High School</p>
                 <p class="date">2022</p>
             </div>
         </div>
 
-        <div class="section">
-            <h2>Training</h2>
-            <p>Diploma in Software Application (6-Months), Postal Office, Cox’s Bazar (Mar 2021 – Nov 2021)</p>
+        <div class="section" id="experience">
+            <h2>Experience</h2>
+            <div class="item">
+                <p class="institution">Executive Member — Remians Debating Society (RDS)</p>
+                <p>Organized national and international debate competitions and encouraged student participation.</p>
+            </div>
+            <div class="item">
+                <p class="institution">Team Member — Cultural Classicists</p>
+                <p>Active contributor to one of the largest cultural platforms in Bangladesh (415K+ followers).</p>
+                <p><a href="https://www.facebook.com/culturalclassicists" target="_blank">Facebook Page</a></p>
+            </div>
+            <div class="item">
+                <p class="institution">Founder & President — CGHS Cultural Club</p>
+                <p>Established the first-ever school-level cultural club in the Chattogram region and managed it for 5 years.</p>
+                <p><a href="https://www.facebook.com/cghsculturalclub" target="_blank">Facebook Page</a></p>
+            </div>
+            <div class="item">
+                <p class="institution">Participant — National Newspaper Olympiad (NNO)</p>
+                <p>Promoted the habit of reading newspapers to stay informed in the fast-evolving modern world.</p>
+            </div>
         </div>
 
-        <div class="section">
+        <div class="section" id="certifications">
             <h2>Certifications & Achievements</h2>
             <ul>
                 <li>Dhaka Regional Runner-up — Bangladesh Math Olympiad 2025</li>
@@ -124,58 +251,67 @@
                 <li>District Champion — Math & Computer, National Education Week 2021</li>
                 <li>Best Science Project — District Level 2021</li>
                 <li>Runner-up — British Council Debate Competition 2021</li>
-                <li>Runner-up — Mousumi Shishu Protijogita GK Competition 2021</li>
+                <li>Runner-up — Mousumi Shishu Protijogita GK Team Competition 2021</li>
                 <li>District Champion in Chess — National Education Week 2021</li>
                 <li>Best Chess Player — Cox’s Bazar District 2019</li>
             </ul>
         </div>
 
-        <div class="section">
-            <h2>Core Competencies</h2>
-            <ul>
-                <li>MS Word, Excel, PowerPoint, Access, Photoshop, Video Editing</li>
-                <li>Languages: Bengali (Native), English (Fluent), Hindi (Spoken Only)</li>
-                <li>Presentation: Skilled in professional and creative report/presentation design</li>
-                <li>Interests: Programming, Designing, Traveling, Gaming, Reading Books</li>
-            </ul>
+        <div class="section" id="volunteering">
+            <h2>Volunteering</h2>
         </div>
 
-        <div class="section">
-            <h2>Experience</h2>
+        <div class="section" id="skills">
+            <h2>Technical Skills & Toolset</h2>
             <div class="item">
-                <p class="institution">Executive Member, Remians Debating Society (RDS)</p>
-                <p>Organized national and international debate competitions and encouraged student participation.</p>
-            </div>
-            <div class="item">
-                <p class="institution">Team Member, Cultural Classicists</p>
-                <p>Contributed to one of the largest cultural platforms in Bangladesh (415K+ followers).</p>
-                <p><a href="https://www.facebook.com/culturalclassicists" target="_blank">Facebook Page</a></p>
-            </div>
-            <div class="item">
-                <p class="institution">Founder & President, CGHS Cultural Club</p>
-                <p>Established and managed the first school-level cultural club in Chattogram for 5 years.</p>
-                <p><a href="https://www.facebook.com/cghsculturalclub" target="_blank">Facebook Page</a></p>
-            </div>
-            <div class="item">
-                <p class="institution">Participant, National Newspaper Olympiad (NNO)</p>
-                <p>Promoted awareness about current events and encouraged newspaper reading habits.</p>
+                <p class="institution">Core Competencies</p>
+                <p>MS Word, Excel, PowerPoint, Access, Photoshop, Video Editing</p>
+                <p>Languages: Bengali (Native), English (Fluent), Hindi (Spoken Only)</p>
+                <p>Presentation: Skilled in professional and creative report/presentation design</p>
+                <p>Interests: Programming, Designing, Traveling, Gaming, Reading Books</p>
             </div>
         </div>
 
-        <div class="section">
-            <h2>Language Proficiency</h2>
-            <ul>
-                <li>English: Upper-Intermediate (Good writing, moderate speaking)</li>
-                <li>Bangla: Native</li>
-            </ul>
+        <div class="section" id="interests">
+            <h2>Interests & Activities</h2>
+            <p>Programming, Design, Traveling, Gaming, Reading Books</p>
         </div>
 
-        <div class="section">
-            <h2>References</h2>
-            <p>Md. Anamul Hoque, Lecturer, Dept. of English, Dhaka Residential Model College</p>
-            <p>Contact: +8801913129655</p>
-        </div>
+        <p class="last-updated">Last Updated: 26th May 2025</p>
+
+        <a href="#" class="download-btn" id="downloadBtn">
+            <i class="fas fa-download"></i>
+        </a>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const nav = document.querySelector('nav');
+            const downloadBtn = document.querySelector('.download-btn');
+
+            const navDisplay = nav.style.display;
+            const btnDisplay = downloadBtn.style.display;
+
+            nav.style.display = 'none';
+            downloadBtn.style.display = 'none';
+
+            const element = document.querySelector('.container');
+
+            html2pdf(element, {
+                margin: 1,
+                filename: 'Mazba_Uddin_Saif_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            }).then(() => {
+                nav.style.display = navDisplay;
+                downloadBtn.style.display = btnDisplay;
+            });
+        });
+    </script>
 </body>
 
 </html>
